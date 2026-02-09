@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Testing</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 35px;
+            background: #2d2d2d;
+            padding: 20px;
+            border-left: 5px solid #4CAF50;
+        }
+        .section:nth-child(even) {
+            border-left-color: #FF9800;
+        }
+        h3 {
+            color: #FF9800;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        a {
+            display: block;
+            color: #64B5F6;
+            text-decoration: none;
+            padding: 6px 0;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        a:hover {
+            color: #90CAF9;
+            text-decoration: underline;
+        }
+        .info {
+            background: #424242;
+            padding: 15px;
+            margin-top: 30px;
+            border-left: 5px solid #FF5722;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>API Test Page</h1>
+        
+        <div class="section">
+            <h3>Question 1 - Library Books</h3>
+            <a href="http://localhost:8081/api/books" target="_blank">GET /api/books</a>
+            <a href="http://localhost:8081/api/books/1" target="_blank">GET /api/books/1</a>
+            <a href="http://localhost:8081/api/books/search?title=clean" target="_blank">GET /api/books/search?title=clean</a>
+        </div>
+
+        <div class="section">
+            <h3>Question 2 - Students</h3>
+            <a href="http://localhost:8081/api/students" target="_blank">GET /api/students</a>
+            <a href="http://localhost:8081/api/students/1" target="_blank">GET /api/students/1</a>
+            <a href="http://localhost:8081/api/students/major/Computer Science" target="_blank">GET /api/students/major/Computer Science</a>
+            <a href="http://localhost:8081/api/students/filter?gpa=3.5" target="_blank">GET /api/students/filter?gpa=3.5</a>
+        </div>
+
+        <div class="section">
+            <h3>Question 3 - Restaurant Menu</h3>
+            <a href="http://localhost:8081/api/menu" target="_blank">GET /api/menu</a>
+            <a href="http://localhost:8081/api/menu/1" target="_blank">GET /api/menu/1</a>
+            <a href="http://localhost:8081/api/menu/category/Appetizer" target="_blank">GET /api/menu/category/Appetizer</a>
+            <a href="http://localhost:8081/api/menu/available?available=true" target="_blank">GET /api/menu/available?available=true</a>
+            <a href="http://localhost:8081/api/menu/search?name=chicken" target="_blank">GET /api/menu/search?name=chicken</a>
+        </div>
+
+        <div class="section">
+            <h3>Question 4 - Products</h3>
+            <a href="http://localhost:8081/api/products" target="_blank">GET /api/products</a>
+            <a href="http://localhost:8081/api/products?page=0&limit=5" target="_blank">GET /api/products?page=0&limit=5</a>
+            <a href="http://localhost:8081/api/products/1" target="_blank">GET /api/products/1</a>
+            <a href="http://localhost:8081/api/products/category/Electronics" target="_blank">GET /api/products/category/Electronics</a>
+            <a href="http://localhost:8081/api/products/brand/Apple" target="_blank">GET /api/products/brand/Apple</a>
+            <a href="http://localhost:8081/api/products/search?keyword=phone" target="_blank">GET /api/products/search?keyword=phone</a>
+            <a href="http://localhost:8081/api/products/price-range?min=100&max=500" target="_blank">GET /api/products/price-range?min=100&max=500</a>
+            <a href="http://localhost:8081/api/products/in-stock" target="_blank">GET /api/products/in-stock</a>
+        </div>
+
+        <div class="section">
+            <h3>Question 5 - Tasks</h3>
+            <a href="http://localhost:8081/api/tasks" target="_blank">GET /api/tasks</a>
+            <a href="http://localhost:8081/api/tasks/1" target="_blank">GET /api/tasks/1</a>
+            <a href="http://localhost:8081/api/tasks/status?completed=false" target="_blank">GET /api/tasks/status?completed=false</a>
+            <a href="http://localhost:8081/api/tasks/priority/HIGH" target="_blank">GET /api/tasks/priority/HIGH</a>
+        </div>
+
+        <div class="section">
+            <h3>Bonus - User Profiles</h3>
+            <a href="http://localhost:8081/api/users" target="_blank">GET /api/users</a>
+            <a href="http://localhost:8081/api/users/1" target="_blank">GET /api/users/1</a>
+            <a href="http://localhost:8081/api/users/search/username?username=john" target="_blank">GET /api/users/search/username?username=john</a>
+            <a href="http://localhost:8081/api/users/search/country/USA" target="_blank">GET /api/users/search/country/USA</a>
+            <a href="http://localhost:8081/api/users/search/age-range?min=25&max=35" target="_blank">GET /api/users/search/age-range?min=25&max=35</a>
+            <a href="http://localhost:8081/api/users/active?active=true" target="_blank">GET /api/users/active?active=true</a>
+        </div>
+
+    </div>
+</body>
+</html>
