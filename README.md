@@ -14,18 +14,20 @@ This project allowed me to apply:
 ## System Structure
 The application consists of **six independent API modules**:
 
-- Library (Book Management)
-- Student Management
-- Restaurant Menu Management
-- Product Management (E-Commerce)
-- Task Management
-- User Profile Management *(Bonus Module)*
+1. Library (Book Management)
+2. Student Management
+3. Restaurant Menu Management
+4. Product Management (E-Commerce)
+5. Task Management
+6. User Profile Management *(Bonus Module)*
 
 Each module follows REST principles and uses consistent endpoint naming and request-handling patterns.
 
 ---
 
-## Library (Book) API
+## API Modules
+
+### 1. Library (Book) API
 Manages library books and supports:
 - Retrieve all books
 - Retrieve a book by ID
@@ -33,9 +35,11 @@ Manages library books and supports:
 - Add new books
 - Delete books
 
+**Base Path:** `/api/books`
+
 ---
 
-## Student Management API
+### 2. Student Management API
 Manages student records and supports:
 - Retrieve all students
 - Retrieve a student by ID
@@ -44,9 +48,11 @@ Manages student records and supports:
 - Add new students
 - Update existing student records
 
+**Base Path:** `/api/students`
+
 ---
 
-## Restaurant Menu API
+### 3. Restaurant Menu API
 Manages restaurant menu items and supports:
 - Retrieve all menu items
 - Filter items by category
@@ -56,9 +62,11 @@ Manages restaurant menu items and supports:
 - Update item availability
 - Delete menu items
 
+**Base Path:** `/api/menu`
+
 ---
 
-## Product Management API
+### 4. Product Management API
 Simulates an e-commerce product system and supports:
 - Retrieve all products
 - Pagination support
@@ -69,9 +77,11 @@ Simulates an e-commerce product system and supports:
 - Create, update, and delete products
 - Update product stock quantity
 
+**Base Path:** `/api/products`
+
 ---
 
-## Task Management API
+### 5. Task Management API
 Manages tasks and supports:
 - Retrieve all tasks
 - Retrieve a task by ID
@@ -82,9 +92,11 @@ Manages tasks and supports:
 - Mark tasks as completed
 - Delete tasks
 
+**Base Path:** `/api/tasks`
+
 ---
 
-## User Profile API (Bonus)
+### 6. User Profile API (Bonus)
 Manages user profiles and uses a unified `ApiResponse` structure containing:
 - Success status
 - Message
@@ -102,6 +114,8 @@ Supported operations:
 - Activate and deactivate users
 - Delete user profiles
 
+**Base Path:** `/api/users`
+
 ---
 
 ## API Design Principles
@@ -110,6 +124,23 @@ Supported operations:
 - Clear separation of modules
 - Consistent naming conventions
 - Clean and maintainable controller logic
+- Appropriate HTTP status codes (200, 201, 204, 404)
+
+---
+
+## Project Structure
+```
+The application consists of **six independent API modules**:
+
+- Library (Book Management)
+- Student Management
+- Restaurant Menu Management
+- Product Management (E-Commerce)
+- Task Management
+- User Profile Management *(Bonus Module)*
+
+Each module follows REST principles and uses consistent endpoint naming and request-handling patterns.
+```
 
 ---
 
@@ -117,14 +148,15 @@ Supported operations:
 The APIs can be tested using:
 - **Postman** or similar API testing tools
 - A **web browser** (for GET requests)
-- The included **HTML testing page** with one-click testing and real-time response display
+- The included **HTML testing page** (`API Testing Page.html`) with one-click testing and real-time response display
 
 ---
 
 ## Technologies Used
-- Java 17
-- Spring Boot 4.0.2
-- Maven
+- **Java 17**
+- **Spring Boot 4.0.2**
+- **Maven** (Build Tool)
+- **Spring Web** (REST API Development)
 
 ---
 
@@ -132,6 +164,7 @@ The APIs can be tested using:
 - All data is stored in memory using `ArrayList`
 - No database is used
 - Data resets automatically when the application restarts
+- Sample data is pre-loaded for each module
 
 ---
 
@@ -147,7 +180,90 @@ Each module supports standard REST operations:
 
 ## Running the Application
 
+### Prerequisites
+- Java 17 or higher installed
+- Maven installed (or use the included Maven wrapper)
+
 ### Run Command
 From the project root directory, run:
 ```bash
 mvn spring-boot:run
+```
+
+Or using the Maven wrapper:
+```bash
+./mvnw spring-boot:run    # Linux/Mac
+mvnw.cmd spring-boot:run  # Windows
+```
+
+### Access the APIs
+Once the application starts, the APIs will be available at:
+```
+http://localhost:8081/api
+```
+
+Example endpoints:
+- http://localhost:8081/api/books
+- http://localhost:8081/api/students
+- http://localhost:8081/api/menu
+- http://localhost:8081/api/products
+- http://localhost:8081/api/tasks
+- http://localhost:8081/api/users
+
+---
+
+## Sample API Requests
+
+### Get All Books
+```
+GET http://localhost:8081/api/books
+```
+
+### Add a New Student
+```
+POST http://localhost:8081/api/students
+Content-Type: application/json
+
+{
+  "studentId": 6,
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "major": "Computer Science",
+  "gpa": 3.8
+}
+```
+
+### Search Products
+```
+GET http://localhost:8081/api/products/search?keyword=phone
+```
+
+### Mark Task as Complete
+```
+PATCH http://localhost:8081/api/tasks/1/complete
+```
+
+---
+
+## Key Features
+-  Complete CRUD operations for all modules
+-  Search and filter functionality
+-  Proper HTTP status codes
+-  Clean code structure
+-  RESTful design principles
+-  Easy to test and extend
+
+---
+
+## Notes
+- This is a learning project focused on REST API development
+- No authentication or authorization is implemented
+- Data persistence is not included (in-memory storage only)
+- The project demonstrates core Spring Boot REST concepts
+
+---
+
+## Author
+Names:Mutsinzi Brian Heritier
+ID: 26522 
