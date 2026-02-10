@@ -147,10 +147,6 @@ Each module supports standard REST operations:
 
 ## Running the Application
 
-### Prerequisites
-- Java 17
-- Maven
-
 ### Run Command
 From the project root directory, run:
 ```bash
