@@ -190,12 +190,6 @@ From the project root directory, run:
 mvn spring-boot:run
 ```
 
-Or using the Maven wrapper:
-```bash
-./mvnw spring-boot:run    # Linux/Mac
-mvnw.cmd spring-boot:run  # Windows
-```
-
 ### Access the APIs
 Once the application starts, the APIs will be available at:
 ```
