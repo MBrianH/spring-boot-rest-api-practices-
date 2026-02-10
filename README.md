@@ -1,7 +1,13 @@
 # Spring Boot REST API Assignment
 
 ## Project Overview
-In this project, I developed a Spring Boot–based RESTful API system using Java and Spring Boot to demonstrate my understanding of RESTful API development. The application is implemented as a single Spring Boot project and organized into multiple independent API modules, where each module represents a real-world scenario and provides full CRUD operations along with searching, filtering, and status-based features. This project allowed me to apply proper REST API design principles, use appropriate HTTP methods, maintain clear separation of concerns, and write clean, readable, and maintainable code.
+In this project, I developed a **Spring Boot–based RESTful API system** using **Java** and **Spring Boot** to demonstrate my understanding of RESTful API development. The application is implemented as a single Spring Boot project and organized into multiple independent API modules, where each module represents a real-world scenario and provides full **CRUD operations**, along with **searching, filtering, and status-based features**.
+
+This project allowed me to apply:
+- Proper REST API design principles  
+- Appropriate HTTP methods  
+- Clear separation of concerns  
+- Clean, readable, and maintainable code  
 
 ---
 
@@ -13,7 +19,7 @@ The application consists of **six independent API modules**:
 - Restaurant Menu Management
 - Product Management (E-Commerce)
 - Task Management
-- User Profile Management (Bonus Module)
+- User Profile Management *(Bonus Module)*
 
 Each module follows REST principles and uses consistent endpoint naming and request-handling patterns.
 
@@ -91,26 +97,27 @@ Supported operations:
 - Filter by country
 - Filter by age range
 - Filter active and inactive users
-- Create, update, activate, deactivate, and delete user profiles
+- Create user profiles
+- Update user profiles
+- Activate and deactivate users
+- Delete user profiles
 
 ---
 
 ## API Design Principles
 - RESTful endpoint structure
-- Proper use of HTTP methods (GET, POST, PUT, PATCH, DELETE)
+- Proper use of HTTP methods (**GET, POST, PUT, PATCH, DELETE**)
 - Clear separation of modules
 - Consistent naming conventions
 - Clean and maintainable controller logic
 
 ---
 
-
----
 ## Testing
 The APIs can be tested using:
-- Postman or similar API testing tools
-- A web browser (for GET requests)
-- The included HTML testing page with one-click testing and real-time response display
+- **Postman** or similar API testing tools
+- A **web browser** (for GET requests)
+- The included **HTML testing page** with one-click testing and real-time response display
 
 ---
 
@@ -136,6 +143,8 @@ Each module supports standard REST operations:
 - **PATCH** – Partial updates
 - **DELETE** – Remove data
 
+---
+
 ## Running the Application
 
 ### Prerequisites
@@ -146,6 +155,3 @@ Each module supports standard REST operations:
 From the project root directory, run:
 ```bash
 mvn spring-boot:run
-
-
-
